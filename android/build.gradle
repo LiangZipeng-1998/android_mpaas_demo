@@ -3,6 +3,21 @@ buildscript {
         mpaas_baseline = '10.2.3-54'
         mpaas_artifact = 'mpaas-baseline'
     }
+    repositories {
+        google()
+        mavenCentral()
+        mavenLocal()
+        maven {
+            url 'https://mvn.cloud.alipay.com/nexus/content/repositories/open/';
+            name 'alipay'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/';
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central';
+        }
+    }
     dependencies {
         classpath 'com.android.boost.easyconfig:easyconfig:2.8.2'
     }
@@ -11,6 +26,17 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
+        maven {
+            url 'https://mvn.cloud.alipay.com/nexus/content/repositories/open/';
+            name 'alipay'
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public/';
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/central';
+        }
     }
 }
 
